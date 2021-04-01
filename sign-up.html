@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>註冊</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="scss/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <script src="js/navbar.js"></script>
+
+    <!-- breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li>></li>
+                <li><span>註冊</span></li>
+            </ul>
+        </div>
+    </div>
+    <!-- 註冊 -->
+    <section class="content-signup">
+        <div class="container">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <h1>註冊</h1>
+            <div class="form-gp">
+                <form>
+                    <div class="form-left">
+                        <div class="icon-gp">
+                            <img src="img/icon-normal.svg" alt="基本資料">
+                            <h3>基本資料</h3>
+                        </div>
+                        <div class="form-gp">
+                            <label for="account">帳號<span>*</span></label>
+                            <input type="text" name="account" id="account">
+                        </div>
+                        <div class="form-gp">
+                            <label for="password">密碼<span>*</span></label>
+                            <input type="password" name="password" id="password">
+                        </div>
+                        <div class="form-gp">
+                            <label for="password-again">再次輸入密碼<span>*</span></label>
+                            <input type="password" name="password" id="password-again">
+                        </div>
+                        <div class="form-gp">
+                            <label for="name">使用者名稱<span>*</span></label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="form-gp">
+                            <label for="email">信箱<span>*</span></label>
+                            <input type="email" name="email" id="email" placeholder="simple@com.tw">
+                        </div>
+                        <div class="form-gp">
+                            <label for="department">服務單位</label>
+                            <select name="type" id="department">
+                                <option value="list1">選單1</option>
+                                <option value="list2">選單2</option>
+                                <option value="list3">選單3</option>
+                            </select>
+                            <input type="text" name="department-other" id="department-other" placeholder="其他-請填寫"
+                                style="margin-top: 15px;">
+                        </div>
+                    </div>
+                    <div class="form-right">
+                        <div class="icon-gp">
+                            <img src="img/icon-advanced.svg" alt="進階資料">
+                            <h3>進階資料</h3>
+                        </div>
+                        <div class="form-check">
+                            <h4>應用類型<span>*</span></h4>
+                            <input class="form-check-input .form-check-inline " type="checkbox" value="" id="type1">
+                            <label class="form-check-label" for="type1">
+                                網站應用
+                            </label>
+                            <input class="form-check-input .form-check-inline " type="checkbox" value="" id="type2">
+                            <label class="form-check-label" for="type2">
+                                學術研究
+                            </label> <br>
+                            <input class="form-check-input .form-check-inline " type="checkbox" value="" id="type3">
+                            <label class="form-check-label" for="type3">
+                                行動應用
+                            </label>
+                            <input class="form-check-input .form-check-inline " type="checkbox" value="" id="type4">
+                            <label class="form-check-label" for="type4">
+                                其他
+                            </label>
+                            <input class="check-input" type="text" name="other" id="other" placeholder="其他-請填寫">
+                        </div>
+                        <div class="form-check">
+                            <label for="purpose" class="h4">資料使用用途<span>*</span></label>
+                            <select name="type" id="purpose">
+                                <option value="list1">服務單位自行使用</option>
+                                <option value="list2">承接政府開發專案/計畫</option>
+                            </select>
+                            <input class="check-input" type="text" name="purpose-name" id="purpose-name"
+                                placeholder="請輸入委託務單位、計畫名稱">
+                        </div>
+                        <div class="form-gp">
+                            <label for="application-name">加值應用名稱<span>*</span></label>
+                            <input type="text" name="application-name" id="application-name">
+                        </div>
+                        <div class="form-gp">
+                            <label for="content-application">加值應用概述<span>*</span></label>
+                            <textarea name="content-application" id="content-application" rows="3"></textarea>
+                        </div>
+                        <div class="form-gp">
+                            <label for="content-service">申請服務概述<span>*</span></label>
+                            <textarea name="content-service" id="content-service" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-submit">
+                        <div class="form-gp">
+                            <label for="code">驗證碼<span>*</span></label>
+                            <img src="img/RandomPic_ForLogin.jpg" alt="" class="code">
+                            <input type="password" name="code" id="code">
+                        </div>
+                        <input class="form-check-input .form-check-inline " type="checkbox" value="" id="private-agree">
+                        <label class="form-check-label" for="private-agree">
+                            我同意<a href="private.html" target="_blank">隱私權保護政策</a><span>*</span>
+                        </label>
+                        <div class="btn">
+                            <input type="submit" value="送出表單">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="notice">
+                <h3>注意事項</h3>
+                <ul>
+                    <li>如果您的身分是<span>水利署、政府機關、學校、法人機構</span>等人員，但是沒有申請資料、API使用及瀏覽非開放性資料等需求，
+                        則亦無須進行註冊、登入。</li>
+                    <li>如果您的身分是<span>一般民眾</span>，則無須登入即可瀏覽入口網所有開放性資料。</li>
+                    <li>入口網目前僅供水利署、政府機關、學校、法人機構等人員進行註冊、登入，經註冊、開通權限後，即具備申請資料、API使用等資格。惟申請資料、API使用時，仍須進入相關功能項中提出申請。</li>
+                    <li>如欲撤銷帳號，請登入<a href="https://iotmanage.wra.gov.tw/"
+                            target="_blank">水資源物聯網感測基礎雲端作業平台</a>，填寫「<span>維護申請單</span>」，維護類別選擇「<span>帳號撤銷</span>」，由管理人員協助處理。
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <script src="js/footer.js"></script>
+
+    <!-- bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <!-- mobile-menu -->
+    <script>
+        var fas = document.querySelector(".fas.fa-bars")
+        var navbar_nav = document.querySelector(".nav.navbar-nav")
+        var nav_item = document.querySelector(".nav-item.dropdown")
+        fas.onclick = function () {
+            if (navbar_nav.classList.contains("active-ul")) {
+                navbar_nav.classList.remove("active-ul")
+            } else {
+                navbar_nav.classList.add("active-ul")
+            }
+        }
+    </script>
+</body>
+
+</html>

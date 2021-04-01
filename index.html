@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水資源物聯網入口網</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <link rel="stylesheet" href="scss/swiper-bundle.min.css">
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <!-- Banner -->
+    <div class="content-banner">
+        <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/infoCompetition-BN.jpg" alt="Banner-index" class="BN-right">
+                </div>
+            </div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- 關於平台 -->
+    <section class="content-about">
+        <div class="container">
+            <div class="about">
+                <h1>競賽主旨</h1>
+                <p>在民眾對水資源之需求日益增高及全球氣候變遷的影響下，水資源的開發調配、保育利用及水患防治等工作，必須集各相關單位資訊來共同完成，同時為有效推動水利資料經濟產業發展，唯有不斷的推動資料開放與提升資料品質，方可讓在地業者發揮資料應用專長，發展加值應用服務並形成公私協力合作模式，有助於建立資料經濟生態系，以帶動水利資料經濟之發展
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- bootstrap -->
+    <!-- <script src="js/jquery-3.3.1.slim.min.js" ></script> -->
+    <script src="js/bootstrap.min.4.2.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper-bundle.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('navbar.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            // loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false,
+            // },
+        });
+    </script>
+
+</body>
+
+</html>
