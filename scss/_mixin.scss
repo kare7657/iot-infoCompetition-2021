@@ -155,7 +155,7 @@
         &[type="reset"] {
             width: 100%;
             height: 40px;
-            background-color: $dark-blue;
+            background-color: $blue;
             color: $title-W;
             font-size: $size-h4;
             font-weight: bold;
@@ -922,7 +922,7 @@
             align-items: center;
             justify-content: center;
             @include mobile-L() {
-               align-items: start;
+                align-items: start;
             }
             .text-gp {
                 @include mobile-L() {
@@ -1337,12 +1337,15 @@
 }
 
 @mixin form() {
-    background-color: $table-blue;
-    border-radius: 20px;
     @include mobile-L() {
         border-radius: unset;
     }
     form {
+        border-radius: 20px;
+        background-color: $table-blue;
+        @include pad() {
+            border-radius: 0;
+        }
         .form-gp {
             padding: 0 $padding-S;
             margin: 0;
@@ -1598,212 +1601,6 @@
             }
             img {
                 margin: $margin-XS;
-            }
-        }
-    }
-}
-@mixin opinion-list() {
-    margin-bottom: $margin-S * 1.5;
-    .list {
-        display: flex;
-        padding: $padding-XXS $padding-XS;
-        padding-left: $padding-S;
-        @include pad() {
-            padding-left: $padding-XS;
-            .c1 {
-                width: 80%;
-            }
-            .c2 {
-                display: none;
-            }
-            .c3 {
-                width: 20%;
-            }
-        }
-        @include mobile-L() {
-            flex-wrap: wrap;
-            flex-direction: column;
-            padding: $padding-XXS $padding-XS * 1.5;
-            .c1 {
-                width: 100%;
-            }
-            .c3 {
-                display: none;
-            }
-        }
-        a {
-            color: $text;
-            font-size: $size-p;
-            line-height: $size-p * 2;
-        }
-    }
-    .head {
-        background-color: $dark-blue;
-        border-radius: 20px 20px 0 0;
-        @include mobile-L() {
-            border-radius: unset;
-        }
-        p {
-            color: $title-W;
-            font-weight: bold;
-        }
-    }
-    .c1 {
-        width: 60%;
-    }
-    .c2 {
-        width: 30%;
-    }
-    .c3 {
-        width: 10%;
-    }
-    .blue {
-        background-color: $table-blue;
-    }
-    .white {
-        background-color: $title-W;
-    }
-    h4 {
-        text-align: right;
-    }
-}
-
-@mixin collapse($bg-color, $text-color) {
-    @include pad() {
-        padding: 0;
-    }
-    .collapsible {
-        width: 100%;
-        border-radius: 10px;
-        cursor: pointer;
-        padding: $padding-XXS $padding-XS;
-        margin-bottom: $margin-XS;
-        border: none;
-        background-color: $bg-color;
-        text-align: left;
-        outline: none;
-        font-size: $size-h4;
-        color: $text-color;
-        font-weight: bold;
-        @include web-S() {
-            margin-bottom: unset;
-            padding: $padding-XXS $padding-XXS * 2;
-        }
-        @include mobile-XS() {
-            font-size: $size-p;
-        }
-    }
-    .collapsible:after {
-        content: "\002B";
-        color: $text-color;
-        font-weight: bold;
-        float: right;
-        margin-left: 5px;
-    }
-    .active:after {
-        content: "\2212";
-    }
-    .content {
-        padding: 0 $padding-XS;
-        margin-bottom: $margin-S;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        @include web-S() {
-            margin-bottom: unset;
-            padding: $padding-XXS $padding-XXS * 2;
-        }
-        @include mobile-XS() {
-            margin-bottom: $margin-XS;
-        }
-        p {
-            text-align: left;
-            font-size: $size-p;
-            color: $text;
-            line-height: $size-p * 2;
-            @include mobile-XS() {
-                font-size: $size-p;
-                line-height: $size-p * 2;
-            }
-        }
-        ul {
-            padding: 0;
-            margin: 0;
-        }
-        ul,
-        li {
-            text-align: left;
-            list-style: none;
-            font-size: $size-p;
-            line-height: $size-p * 2.5;
-            @include mobile-XS() {
-                font-size: $size-p;
-            }
-        }
-        a {
-            color: $text;
-        }
-    }
-}
-
-@mixin FAQ() {
-    padding: 0 $padding-L;
-    @include pad() {
-        padding: 0 $padding-XS;
-    }
-    .collapsible {
-        width: 100%;
-        border-radius: 10px;
-        cursor: pointer;
-        padding: $padding-XXS $padding-XS;
-        border: none;
-        background-color: $table-blue;
-        text-align: left;
-        outline: none;
-        font-size: $size-h4;
-        color: $dark-blue;
-        // font-weight: bold;
-        @include mobile-XS() {
-            font-size: $text;
-        }
-    }
-    .collapsible:after {
-        content: "\002B";
-        color: $dark-blue;
-        font-weight: bold;
-        float: right;
-        margin-left: 5px;
-    }
-    .active:after {
-        content: "\2212";
-    }
-    .content {
-        padding: 0 $padding-XS;
-        margin-bottom: $margin-S;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.2s ease-out;
-        @include mobile-XS() {
-            margin-bottom: $margin-XS;
-        }
-        p {
-            text-align: justify;
-            font-size: $text;
-            color: $text;
-            line-height: $text * 2;
-            margin-top: $margin-XS/2;
-            @include mobile-XS() {
-                font-size: $size-p;
-                line-height: $size-p * 2;
-            }
-        }
-        ul,
-        li {
-            list-style: none;
-            font-size: $text;
-            color: $text;
-            @include mobile-XS() {
-                font-size: $size-p;
             }
         }
     }
