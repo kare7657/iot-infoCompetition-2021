@@ -664,9 +664,9 @@
 }
 
 * .pagination ul li .active {
-  background-color: #0d73ad;
+  background-color: #428cdc;
   color: white;
-  border: solid 1px #0d73ad;
+  border: solid 1px #428cdc;
 }
 
 * .pagination ul li .fas {
@@ -761,8 +761,8 @@ body .navbar {
   position: fixed;
   z-index: 999;
   background-color: white;
-  -webkit-box-shadow: 5px 5px 10px rgba(13, 115, 173, 0.1);
-          box-shadow: 5px 5px 10px rgba(13, 115, 173, 0.1);
+  -webkit-box-shadow: 5px 5px 10px rgba(66, 140, 220, 0.1);
+          box-shadow: 5px 5px 10px rgba(66, 140, 220, 0.1);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -915,7 +915,7 @@ body .navbar .mobile .menu .fas.fa-bars {
   font-size: 30px;
   line-height: 60px;
   padding: 0 20px;
-  color: #0d73ad;
+  color: #428cdc;
 }
 
 body .navbar .mobile .menu ul {
@@ -936,7 +936,7 @@ body .navbar .mobile .menu ul {
 }
 
 body .navbar .mobile .menu ul .nav-item.dropdown .dropdown-menu {
-  background-color: #0d73ad;
+  background-color: #428cdc;
   color: white;
   text-align: center;
 }
@@ -1158,6 +1158,34 @@ body .content-information span {
   font-weight: bold;
 }
 
+body .content-information table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: auto;
+}
+
+body .content-information table table,
+body .content-information table th,
+body .content-information table td {
+  border: 1px solid #a7e5ff;
+  padding: 5px 10px;
+}
+
+body .content-information table th {
+  background-color: rgba(167, 229, 255, 0.5);
+  text-align: center;
+}
+
+@media (max-width: 568px) {
+  body .content-information table th:nth-child(1) {
+    width: 25%;
+  }
+}
+
+body .content-information table tr:nth-child(even) {
+  background-color: rgba(167, 229, 255, 0.1);
+}
+
 body .content-information .container .list-gp {
   width: 100%;
   margin-right: 50px;
@@ -1200,7 +1228,7 @@ body .content-information .container .list-gp .list {
 body .content-information .container .list-gp .list span {
   width: 15%;
   text-align: center;
-  color: #0d73ad;
+  color: #428cdc;
   font-size: 1rem;
   line-height: 2rem;
 }
@@ -1231,6 +1259,10 @@ body .content-information .container .list-gp .white {
 
 body .content-information .container .list-gp h4 {
   text-align: right;
+}
+
+body .content-information .container strong {
+  margin: 10px 0;
 }
 
 body footer {
@@ -1525,7 +1557,7 @@ body .content-webmap .container .list-gp .text-gp ul {
 }
 
 body .content-webmap .container .list-gp .text-gp ul a {
-  color: #0d73ad;
+  color: #428cdc;
 }
 
 body .content-news h1 {
@@ -1648,7 +1680,7 @@ body .content-news .container .list-gp .list {
 body .content-news .container .list-gp .list span {
   width: 15%;
   text-align: center;
-  color: #0d73ad;
+  color: #428cdc;
   font-size: 1rem;
   line-height: 2rem;
 }
@@ -1721,7 +1753,7 @@ body .content-news-info .container .info-top ul {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-  color: #0d73ad;
+  color: #428cdc;
 }
 
 body .content-news-info .container .info-top ul li {
@@ -1737,7 +1769,7 @@ body .content-news-info .container .info-top ul li {
 
 body .content-news-info .container .info-top ul .far {
   width: 13px;
-  color: #0d73ad;
+  color: #428cdc;
   font-size: 1rem;
   margin-right: 10px;
 }
@@ -2499,7 +2531,7 @@ body .theme-modal .river .modal-dialog .modal-content .modal-footer {
 
 body .theme-modal .river .modal-dialog .modal-content .modal-footer p {
   text-align: right;
-  color: #0d73ad;
+  color: #428cdc;
 }
 
 body .theme-modal .river .modal-dialog .modal-content .modal-footer p i {
@@ -2619,7 +2651,7 @@ body .theme-modal .flood .modal-dialog .modal-content .modal-footer {
 
 body .theme-modal .flood .modal-dialog .modal-content .modal-footer p {
   text-align: right;
-  color: #0d73ad;
+  color: #428cdc;
 }
 
 body .theme-modal .flood .modal-dialog .modal-content .modal-footer p i {
@@ -2905,7 +2937,7 @@ body .content-login .container {
 body .content-login .container .form {
   margin: auto;
   width: 50%;
-  padding: 60px;
+  padding: 30px;
 }
 
 @media (max-width: 568px) {
@@ -2915,11 +2947,24 @@ body .content-login .container .form {
 }
 
 body .content-login .container .form form {
+  padding: 30px 60px;
   border-radius: 20px;
   background-color: #e5f1f9;
 }
 
+@media (max-width: 1024px) {
+  body .content-login .container .form form {
+    padding: 30px 100px;
+  }
+}
+
 @media (max-width: 768px) {
+  body .content-login .container .form form {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 568px) {
   body .content-login .container .form form {
     border-radius: 0;
   }
@@ -3158,13 +3203,14 @@ body .content-login .container .form form span {
 @media (max-width: 768px) {
   body .content-login .container .form {
     width: 80%;
-    padding: 60px 0;
+    padding: 30px 0;
   }
 }
 
 @media (max-width: 568px) {
   body .content-login .container .form {
     width: 100%;
+    padding-top: 0;
   }
 }
 
@@ -3232,11 +3278,24 @@ body .content-signup .container {
 }
 
 body .content-signup .container .form-gp form {
+  padding: 30px 60px;
   border-radius: 20px;
   background-color: #e5f1f9;
 }
 
+@media (max-width: 1024px) {
+  body .content-signup .container .form-gp form {
+    padding: 30px 100px;
+  }
+}
+
 @media (max-width: 768px) {
+  body .content-signup .container .form-gp form {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 568px) {
   body .content-signup .container .form-gp form {
     border-radius: 0;
   }
@@ -3469,7 +3528,6 @@ body .content-signup .container .form-gp form span {
 body .content-signup .container .form-gp form {
   width: 100%;
   max-width: 800px;
-  padding: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3481,17 +3539,11 @@ body .content-signup .container .form-gp form {
   margin: auto;
 }
 
-@media (max-width: 768px) {
-  body .content-signup .container .form-gp form {
-    padding: 30px 0;
-  }
-}
-
 body .content-signup .container .form-gp form .form-submit {
   width: 100%;
   background-color: transparent;
   text-align: center;
-  margin-top: 25px;
+  padding: 0 100px;
 }
 
 @media (max-width: 1024px) {
@@ -3502,14 +3554,14 @@ body .content-signup .container .form-gp form .form-submit {
 
 @media (max-width: 768px) {
   body .content-signup .container .form-gp form .form-submit {
-    width: 80%;
     margin-top: 0;
+    padding: 0 90px;
   }
 }
 
 @media (max-width: 568px) {
   body .content-signup .container .form-gp form .form-submit {
-    width: 100%;
+    padding: 0 45px;
     margin-bottom: 25px;
   }
 }
@@ -3528,13 +3580,14 @@ body .content-signup .container .form-gp form .form-submit .form-gp {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 10px 0;
-  padding: 0 100px;
+  padding: 0;
 }
 
-@media (max-width: 568px) {
+@media (max-width: 768px) {
   body .content-signup .container .form-gp form .form-submit .form-gp {
-    padding: 0 45px;
-    margin: 25px 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -3545,17 +3598,29 @@ body .content-signup .container .form-gp form .form-submit .form-gp label {
 
 @media (max-width: 768px) {
   body .content-signup .container .form-gp form .form-submit .form-gp label {
+    width: 20%;
+  }
+}
+
+@media (max-width: 568px) {
+  body .content-signup .container .form-gp form .form-submit .form-gp label {
     width: 100%;
   }
 }
 
 body .content-signup .container .form-gp form .form-submit .form-gp input {
-  width: 30%;
+  width: 40%;
 }
 
 @media (max-width: 768px) {
   body .content-signup .container .form-gp form .form-submit .form-gp input {
     width: 50%;
+  }
+}
+
+@media (max-width: 568px) {
+  body .content-signup .container .form-gp form .form-submit .form-gp input {
+    width: 60%;
   }
 }
 
@@ -3593,7 +3658,7 @@ body .content-signup .container .form-gp form .form-submit .btn {
 
 @media (max-width: 568px) {
   body .content-signup .container .form-gp form .form-submit .btn {
-    padding: 0 45px;
+    width: 70%;
   }
 }
 
@@ -3685,7 +3750,7 @@ body .content-signup .container .account-list-gp {
 body .content-signup .container .account-list-gp #team {
   width: 30%;
   border-radius: 15px;
-  border: solid 1px #0d73ad;
+  border: solid 1px #428cdc;
   margin-bottom: 50px;
 }
 
@@ -3712,7 +3777,7 @@ body .content-signup .container .account-list-gp #team:hover {
 
 body .content-signup .container .account-list-gp #team .top {
   width: 100%;
-  background-color: #0d73ad;
+  background-color: #428cdc;
   padding: 45px 0;
   text-align: center;
   border-radius: 10px 10px 0 0;
@@ -3749,7 +3814,7 @@ body .content-signup .container .account-list-gp #team .body {
 }
 
 body .content-signup .container .account-list-gp #team .body h4 {
-  color: #0d73ad;
+  color: #428cdc;
   text-align: left;
 }
 
@@ -3764,7 +3829,7 @@ body .content-signup .container .account-list-gp #team .bot .btn {
 }
 
 body .content-signup .container .account-list-gp #team .bot .btn button {
-  background-color: #0d73ad;
+  background-color: #428cdc;
   width: 90%;
   margin-bottom: 25px;
 }
@@ -4194,11 +4259,24 @@ body .content-member-data .container .member-data .form {
 }
 
 body .content-member-data .container .member-data .form form {
+  padding: 30px 60px;
   border-radius: 20px;
   background-color: #e5f1f9;
 }
 
+@media (max-width: 1024px) {
+  body .content-member-data .container .member-data .form form {
+    padding: 30px 100px;
+  }
+}
+
 @media (max-width: 768px) {
+  body .content-member-data .container .member-data .form form {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 568px) {
   body .content-member-data .container .member-data .form form {
     border-radius: 0;
   }
@@ -4527,11 +4605,24 @@ body .content-api-attestation .container .form {
 }
 
 body .content-api-attestation .container .form form {
+  padding: 30px 60px;
   border-radius: 20px;
   background-color: #e5f1f9;
 }
 
+@media (max-width: 1024px) {
+  body .content-api-attestation .container .form form {
+    padding: 30px 100px;
+  }
+}
+
 @media (max-width: 768px) {
+  body .content-api-attestation .container .form form {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 568px) {
   body .content-api-attestation .container .form form {
     border-radius: 0;
   }

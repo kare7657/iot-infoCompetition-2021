@@ -568,9 +568,9 @@
                     }
                 }
                 .active {
-                    background-color: $dark-blue;
+                    background-color: $blue;
                     color: $title-W;
-                    border: solid 1px $dark-blue;
+                    border: solid 1px $blue;
                 }
                 .fas {
                     font-size: $size-p;
@@ -631,7 +631,7 @@
     position: fixed;
     z-index: 999;
     background-color: white;
-    box-shadow: 5px 5px 10px rgba($color: $dark-blue, $alpha: 0.1);
+    box-shadow: 5px 5px 10px rgba($color: $blue, $alpha: 0.1);
     display: flex;
     justify-content: center;
     margin-top: 40px;
@@ -737,7 +737,7 @@
                 font-size: 30px;
                 line-height: 60px;
                 padding: 0 20px;
-                color: $dark-blue;
+                color: $blue;
             }
             ul {
                 display: inline-block;
@@ -755,7 +755,7 @@
                 transition-duration: 0.7s;
                 .nav-item.dropdown {
                     .dropdown-menu {
-                        background-color: $dark-blue;
+                        background-color: $blue;
                         color: $title-W;
                         text-align: center;
                         .dropdown-item {
@@ -817,8 +817,6 @@
     background-color: #fff;
     padding: 8px 0;
     margin: 0;
-    // position: absolute;
-    // top: 150px;
     padding-top: 150px;
     @include pad() {
         padding-top: 65px;
@@ -1013,7 +1011,7 @@
         span {
             width: $span-width;
             text-align: center;
-            color: $dark-blue;
+            color: $blue;
             font-size: $size-p;
             line-height: $size-p * 2;
             @include pad() {
@@ -1257,7 +1255,7 @@
                 padding-right: 20px;
                 p {
                     text-align: right;
-                    color: $dark-blue;
+                    color: $blue;
                     i {
                         margin-right: 5px;
                     }
@@ -1341,9 +1339,16 @@
         border-radius: unset;
     }
     form {
+        padding: $padding-XS $padding-S;
         border-radius: 20px;
         background-color: $table-blue;
+        @include web-S() {
+            padding: $padding-XS $padding-M;
+        }
         @include pad() {
+            padding: $padding-XS 0;
+        }
+        @include mobile-L {
             border-radius: 0;
         }
         .form-gp {
@@ -1602,6 +1607,32 @@
             img {
                 margin: $margin-XS;
             }
+        }
+    }
+}
+
+@mixin table {
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        table-layout: auto;
+        table,
+        th,
+        td {
+            border: 1px solid $light-sky;
+            padding: $padding-XXS/2 $padding-XXS;
+        }
+        th {
+            background-color: rgba($color: $light-sky, $alpha: 0.5);
+            text-align: center;
+            @include mobile-L {
+                &:nth-child(1) {
+                    width: 25%;
+                }
+            }
+        }
+        tr:nth-child(even) {
+            background-color: rgba($color: $light-sky, $alpha: 0.1);
         }
     }
 }

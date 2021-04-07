@@ -67,14 +67,18 @@ body {
         @include breadcrumb();
     }
 
-    //政府網站資料開放宣告
+    //競賽辦法
     .content-information {
         @include papers();
         @include text-important();
+        @include table;
         .container {
             .list-gp {
                 @include news-list(100%, 15%);
                 margin: $margin-S * 1.5 0;
+            }
+            strong{
+                margin: $margin-XS 0;
             }
         }
     }
@@ -168,7 +172,7 @@ body {
                             line-height: $size-p * 2.5;
                         }
                         a {
-                            color: $dark-blue;
+                            color: $blue;
                         }
                     }
                 }
@@ -198,7 +202,7 @@ body {
                     margin: 0;
                     padding: 0;
                     font-size: $size-p;
-                    color: $dark-blue;
+                    color: $blue;
                     li {
                         display: inline;
                         margin-right: $margin-S;
@@ -208,7 +212,7 @@ body {
                     }
                     .far {
                         width: 13px;
-                        color: $dark-blue;
+                        color: $blue;
                         font-size: $size-p;
                         margin-right: 10px;
                     }
@@ -407,16 +411,17 @@ body {
                 @include form();
                 margin: auto;
                 width: 50%;
-                padding: $padding-S;
+                padding: $padding-XS;
                 @include web-S() {
                     width: 60%;
                 }
                 @include pad() {
                     width: 80%;
-                    padding: $padding-S 0;
+                    padding: $padding-XS 0;
                 }
                 @include mobile-L() {
                     width: 100%;
+                    padding-top: 0;
                 }
                 .g-recaptcha {
                     width: 100%;
@@ -445,28 +450,24 @@ body {
                 form {
                     width: 100%;
                     max-width: 800px;
-                    padding: $padding-S;
                     display: flex;
                     justify-content: center;
                     flex-wrap: wrap;
                     margin: auto;
-                    @include pad() {
-                        padding:$padding-XS 0;
-                    }
                     .form-submit {
                         width: 100%;
                         background-color: transparent;
                         text-align: center;
-                        margin-top: $margin-S;
+                        padding: 0 $padding-M;
                         @include web-S() {
                             margin: $margin-S 0;
                         }
                         @include pad() {
-                            width: 80%;
                             margin-top: 0;
+                            padding: 0 90px;
                         }
                         @include mobile-L() {
-                            width: 100%;
+                            padding: 0 $padding-XS*1.5;
                             margin-bottom: $margin-S;
                         }
                         .form-gp {
@@ -475,22 +476,29 @@ body {
                             flex-wrap: wrap;
                             flex-direction: row;
                             margin: $margin-XS 0;
-                            padding: 0 $padding-M;
-                            @include mobile-L() {
-                                padding: 0 $padding-XS * 1.5;
-                                margin: $margin-S 0;
+                            padding: 0;
+                            @include pad() {
+                                justify-content: space-between;
+                            }
+                            @include mobile-L {
                             }
                             label {
                                 width: 30%;
                                 margin: $margin-XS 0;
                                 @include pad() {
+                                    width: 20%;
+                                }
+                                @include mobile-L() {
                                     width: 100%;
                                 }
                             }
                             input {
-                                width: 30%;
+                                width: 40%;
                                 @include pad() {
                                     width: 50%;
+                                }
+                                @include mobile-L() {
+                                    width: 60%;
                                 }
                                 &[type="checkbox"] {
                                     width: 20px;
@@ -522,14 +530,13 @@ body {
                             width: 50%;
                             display: block;
                             margin: auto;
-                            @include mobile-L() {
-                                padding: 0 $padding-XS * 1.5;
+                            @include mobile-L {
+                                width: 70%;
                             }
                         }
                         a {
                             margin-left: 3px;
                         }
-
                         .form-check-label {
                             line-height: $size-h4 * 2;
                             margin-left: $margin-XS;
@@ -571,7 +578,7 @@ body {
                     flex-wrap: wrap;
                 }
                 #team {
-                    @include account-list($dark-blue);
+                    @include account-list($blue);
                 }
                 #egov {
                     @include account-list($green);
@@ -736,5 +743,4 @@ body {
             }
         }
     }
-
 }

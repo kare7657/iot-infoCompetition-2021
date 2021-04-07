@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>最新消息</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <!-- breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li>></li>
+                <li><span>最新消息</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 最新消息清單 -->
+    <section class="content-news">
+        <div class="container">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <h1>最新消息</h1>
+            <div class="searchbar">
+                <input type="search" placeholder="搜尋關鍵字">
+            </div>
+            <div class="list-gp">
+                <div class="list blue">
+                    <span>2020/3/26</span>
+                    <a href="competition-news-post1.html">
+                        <p>各縣市告警線上查詢上架</p>
+                    </a>
+                </div>
+                <div class="list white">
+                    <span>2020/3/25</span>
+                    <a href="">
+                        <p>API使用資料統計及水情地圖查詢上線</p>
+                    </a>
+                </div>
+                <div class="list blue">
+                    <span>2020/3/24</span>
+                    <a href="">
+                        <p>進行本年度實際實地營運持續演練</p>
+                    </a>
+                </div>
+                <div class="list white">
+                    <span>2020/3/21</span>
+                    <a href="">
+                        <p>一圖看懂民生公共物聯網</p>
+                    </a>
+                </div>
+                <div class="list blue">
+                    <span>2020/3/15</span>
+                    <a href="">
+                        <p>高屏溪智慧河川建置計畫</p>
+                    </a>
+                </div>
+                <div class="list white">
+                    <span>2020/3/13</span>
+                    <a href="">
+                        <p>各縣市告警線上查詢上架</p>
+                    </a>
+                </div>
+                <div class="list blue">
+                    <span>2020/3/10</span>
+                    <a href="">
+                        <p>API使用資料統計及水情地圖查詢上線</p>
+                    </a>
+                </div>
+                <div class="list white">
+                    <span>2020/3/07</span>
+                    <a href="">
+                        <p>進行本年度實際實地營運持續演練</p>
+                    </a>
+                </div>
+                <div class="list blue">
+                    <span>2020/3/05</span>
+                    <a href="">
+                        <p>一圖看懂民生公共物聯網</p>
+                    </a>
+                </div>
+                <div class="list white">
+                    <span>2020/3/03</span>
+                    <a href="">
+                        <p>高屏溪智慧河川建置計畫</p>
+                    </a>
+                </div>
+            </div>
+            <div class="pagination">
+                <ul>
+                    <li><a href=""><i class="fas fa-angle-double-left"></i></a></li>
+                    <li><a href=""><i class="fas fa-angle-left"></i></a></li>
+                    <li><a href="" class="active">1</a></li>
+                    <li><a href="">2</a></li>
+                    <li><a href="">3</a></li>
+                    <li><a href="">4</a></li>
+                    <li><a href="">5</a></li>
+                    <li><a href=""><i class="fas fa-angle-right"></i></a></li>
+                    <li><a href=""><i class="fas fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+     <!-- bootstrap -->
+    <!-- <script src="js/jquery-3.3.1.slim.min.js" ></script> -->
+    <script src="js/bootstrap.min.4.2.js"></script>
+    <script src="js/popper.min.js"></script>
+
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('navbar.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>
