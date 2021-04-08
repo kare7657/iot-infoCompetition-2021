@@ -1265,6 +1265,10 @@ body .content-information .container strong {
   margin: 10px 0;
 }
 
+body .content-information .container .indent {
+  margin-left: 1rem;
+}
+
 body footer {
   background-color: #f2f2f3;
 }

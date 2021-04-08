@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相關文件</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <!-- breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li>></li>
+                <li><span>相關文件</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 相關文件 -->
+    <section class="content-information">
+        <div class="container">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <h1>相關文件</h1>
+            <h3>競賽說明簡報</h3>
+            <p>若有任何問題，歡迎來信至 <span class="text-danger">XXXX@gmail.com</span> 詢問</p>
+            <h3>報名文件</h3>
+            <div class="d-flex flex-column">
+                <a href="" class="d-inline mb-2"><i class="fas fa-paperclip mr-2"></i>競賽簡章</a>
+                <a href="" class="d-inline mb-2"><i class="fas fa-paperclip mr-2"></i>團隊資料表</a>
+                <a href="" class="d-inline mb-2"><i class="fas fa-paperclip mr-2"></i>提案構想書</a>
+                <a href="" class="d-inline mb-2"><i class="fas fa-paperclip mr-2"></i>資料使用說明表</a>
+                <a href="" class="d-inline mb-2"><i class="fas fa-paperclip mr-2"></i>參賽切結書</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <!-- <script src="js/jquery-3.3.1.slim.min.js" ></script> -->
+    <script src="js/bootstrap.min.4.2.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('navbar.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>
