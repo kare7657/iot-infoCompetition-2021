@@ -48,6 +48,13 @@ body {
     }
     //關於平台
     .content-about {
+        min-height: calc(100vh - 650px);
+        @include pad {
+            min-height: calc(100vh - 445px);
+        }
+        @include mobile-L {
+            min-height: auto;
+        }
         .container {
             display: flex;
             @include pad() {
@@ -69,6 +76,13 @@ body {
 
     //競賽辦法
     .content-information {
+        min-height: calc(100vh - 260px);
+        @include pad {
+            min-height: calc(100vh - 175px);
+        }
+        @include mobile-L {
+            min-height: auto;
+        }
         @include papers();
         @include text-important();
         @include table;
@@ -77,10 +91,10 @@ body {
                 @include news-list(100%, 15%);
                 margin: $margin-S * 1.5 0;
             }
-            strong{
+            strong {
                 margin: $margin-XS 0;
             }
-            .indent{
+            .indent {
                 margin-left: 1rem;
             }
         }
@@ -92,98 +106,15 @@ body {
     .back-top {
         @include back-top();
     }
-    //QR code
-    .content-QRcode {
-        text-align: center;
-        .container {
-            @include pad() {
-                padding-bottom: 0;
-            }
-            .QRcode-gp {
-                width: 400px;
-                margin: auto;
-                display: flex;
-                border: solid 6px $light-sky;
-                border-radius: 20px;
-                padding: $padding-XS;
-                margin-top: 100px;
-                position: relative;
-                @include mobile-L() {
-                    width: 100%;
-                    flex-wrap: wrap;
-                }
-                .robot {
-                    z-index: -5;
-                    position: absolute;
-                    top: -82px;
-                    left: calc(50% - 53px);
-                }
-                .QR {
-                    width: 50%;
-                    height: 50%;
-                    @include mobile-L() {
-                        width: 100%;
-                    }
-                }
-                h3 {
-                    width: 50%;
-                    padding: $padding-XXS 0;
-                    padding-left: $padding-XS;
-                    margin: 0;
-                    text-align: left;
-                    @include mobile-L() {
-                        width: 100%;
-                        text-align: center;
-                        padding-left: 0;
-                    }
-                }
-            }
-        }
-    }
-
-    //導覽清單
-    .content-webmap {
-        .container {
-            padding-top: unset;
-            .list-gp {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                .text-gp {
-                    width: 23%;
-                    @include pad() {
-                        width: 48%;
-                    }
-                    @include mobile-L() {
-                        width: 100%;
-                    }
-                    h3 {
-                        background-color: $table-blue;
-                        padding: 0 $padding-XS;
-                        margin: 0;
-                    }
-                    ul {
-                        padding: $padding-XS;
-                        padding-top: $padding-XXS;
-                        list-style: none;
-                        font-size: $size-p;
-                        line-height: $size-p * 2;
-                        margin: 0;
-                        margin-bottom: $margin-S;
-                        @include mobile-L() {
-                            margin-bottom: $margin-XS;
-                            line-height: $size-p * 2.5;
-                        }
-                        a {
-                            color: $blue;
-                        }
-                    }
-                }
-            }
-        }
-    }
     //最新消息清單
     .content-news {
+        min-height: calc(100vh - 260px);
+        @include pad {
+            min-height: calc(100vh - 175px);
+        }
+        @include mobile-L {
+            min-height: auto;
+        }
         @include papers();
         .container {
             .searchbar {
@@ -249,155 +180,15 @@ body {
         }
     }
 
-    //資料主題
-    .content-theme {
-        .container {
-            padding-top: 220px;
-            display: flex;
-            justify-content: space-between;
-            @include mobile-L() {
-                flex-wrap: wrap;
-                padding-top: 130px;
-            }
-            // 左欄按鈕
-            .left {
-                width: 30%;
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                flex-wrap: wrap;
-                flex-direction: column;
-                @include pad() {
-                    img {
-                        width: 60%;
-                    }
-                }
-                @include mobile-L() {
-                    width: 100%;
-                    flex-wrap: nowrap;
-                    flex-direction: row;
-                    img {
-                        width: 60%;
-                    }
-                }
-                .theme-btn {
-                    margin-bottom: $margin-M;
-                    @include mobile-L() {
-                        width: 45%;
-                        margin-bottom: $margin-S;
-                    }
-                    h3 {
-                        color: $title-BK;
-                        margin: unset;
-                    }
-                    #flood-btn,
-                    #river-btn {
-                        filter: opacity(40%);
-                        h3 {
-                            filter: opacity(40%);
-                        }
-                        &:hover {
-                            filter: opacity(100%);
-                            h3 {
-                                filter: opacity(100%);
-                            }
-                        }
-                    }
-                }
-            }
-            // 右欄
-            .right {
-                width: 70%;
-                @include mobile-L() {
-                    width: 100%;
-                }
-                // 右欄內容-河川
-                .river {
-                    text-align: center;
-                    @include theme-list(100%, $green);
-                    @include mobile-L() {
-                        @include theme-list(100%, $green);
-                    }
-                }
-                //右欄內容-淹水
-                .flood {
-                    text-align: center;
-                    @include theme-list(100%, $blue);
-                    @include mobile-L() {
-                        @include theme-list(100%, $blue);
-                    }
-                }
-            }
-            .pagination {
-                margin-top: $margin-M;
-            }
-        }
-    }
-    // 資料主題-浮動視窗
-    .theme-modal {
-        .river {
-            @include modal(80%, $green);
-        }
-        .flood {
-            @include modal(80%, $blue);
-        }
-    }
-    //資料使用統計
-    .content-data {
-        @include papers();
-        h1 {
-            @include mobile-L() {
-                margin: $margin-S 0;
-                text-align: center;
-            }
-        }
-        h3 {
-            text-align: center;
-            margin-top: $margin-XS;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    //示範應用
-    .content-example {
-        @include papers();
-        .container {
-            .example-head {
-                margin-bottom: $margin-M;
-                @include mobile-L() {
-                    margin-bottom: $margin-S;
-                }
-                .btn {
-                    display: flex;
-                    justify-content: center;
-                    @include mobile-L() {
-                        flex-wrap: wrap;
-                        flex-direction: column;
-                    }
-                    button {
-                        margin: 0 $margin-XS;
-                        @include mobile-L() {
-                            margin-bottom: $margin-XS;
-                        }
-                    }
-                }
-                h1 {
-                    text-align: center;
-                }
-            }
-            .example-body {
-                @include example();
-            }
-            .pagination {
-                @include mobile-L() {
-                    margin: 0;
-                }
-            }
-        }
-    }
     //登入
     .content-login {
+        min-height: calc(100vh - 260px);
+        @include pad {
+            min-height: calc(100vh - 175px);
+        }
+        @include mobile-L {
+            min-height: auto;
+        }
         @include papers();
         .container {
             padding-top: 0;
@@ -435,6 +226,13 @@ body {
     }
     //註冊
     .content-signup {
+        min-height: calc(100vh - 260px);
+        @include pad {
+            min-height: calc(100vh - 175px);
+        }
+        @include mobile-L {
+            min-height: auto;
+        }
         @include papers();
         @include text-important();
         .container {
@@ -452,14 +250,14 @@ body {
                 @include form();
                 form {
                     width: 100%;
-                    max-width: 800px;
+                    max-width: 700px;
                     display: flex;
                     justify-content: center;
                     flex-wrap: wrap;
                     margin: auto;
                     .form-submit {
                         width: 100%;
-                        background-color: transparent;
+                        // background-color: transparent;
                         text-align: center;
                         padding: 0 $padding-M;
                         @include web-S() {
@@ -470,7 +268,7 @@ body {
                             padding: 0 90px;
                         }
                         @include mobile-L() {
-                            padding: 0 $padding-XS*1.5;
+                            padding: 0 $padding-XS * 1.5;
                             margin-bottom: $margin-S;
                         }
                         .form-gp {
@@ -601,9 +399,13 @@ body {
     }
     //註冊成功
     .content-sign-up-success {
+        min-height: calc(100vh - 80px);
+        @include mobile-L {
+            min-height: auto;
+        }
         .container {
             padding: $padding-M;
-            padding-top: 220px;
+            padding-top: 250px;
             height: 100%;
             text-align: center;
             @include pad() {
@@ -620,11 +422,14 @@ body {
                 }
             }
             img {
-                width: 100px;
-                margin-bottom: $margin-S;
+                width: 80px;
+                margin-bottom: $margin-XS;
+            }
+            h1 {
+                margin-bottom: 0;
             }
             .btn {
-                margin: $margin-S 0;
+                margin: $margin-XS 0;
             }
         }
     }
@@ -695,51 +500,6 @@ body {
                             margin: 0;
                             text-align: center;
                             height: 44px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //API認證資訊
-    .content-api-attestation {
-        @include papers();
-        .container {
-            @include mobile-L() {
-                width: 100%;
-                margin: 0;
-                padding-bottom: 0;
-                h1 {
-                    text-align: center;
-                }
-            }
-            .form {
-                @include form();
-                margin: auto;
-                width: 60%;
-                padding: $padding-S;
-                @include web-S() {
-                    width: 70%;
-                }
-                @include pad() {
-                    width: 100%;
-                    padding: $padding-S 0;
-                }
-                form {
-                    .form-gp {
-                        h4 {
-                            width: 100%;
-                            text-align: left;
-                        }
-                        span {
-                            width: 100%;
-                            color: $red;
-                            text-align: left;
-                            padding-bottom: $padding-XXS/2;
-                            margin: 0;
-                        }
-                        p {
-                            padding-top: 0;
                         }
                     }
                 }

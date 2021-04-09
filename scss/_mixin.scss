@@ -40,9 +40,6 @@
         @include pad() {
             width: 80%;
         }
-        // @include mobile-L() {
-        //     padding-top: 0;
-        // }
     }
     h1 {
         font-size: $size-h1;
@@ -175,79 +172,6 @@
                 background-color: $light-sky;
             }
         }
-        &[type="range"] {
-            -webkit-appearance: none;
-            overflow: hidden; /* 限定範圍 */
-            height: 20px;
-            outline: none;
-            background: none;
-            border: none;
-            // chrome
-            &::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                position: relative;
-                width: 15px;
-                height: 15px;
-                background: $blue;
-                border-radius: 50%;
-            }
-            &::-webkit-slider-runnable-track {
-                border-radius: 10px;
-                background: $light-sky;
-                /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            }
-            //火狐
-            &::-moz-range-track {
-                height: 15px;
-                border-radius: 15px;
-                background: $light-sky;
-                border: none;
-            }
-
-            &::-moz-range-thumb {
-                width: 15px;
-                height: 15px;
-                background: $blue;
-                border: none;
-                border-radius: 50%;
-            }
-
-            &::-moz-range-thumb:hover,
-            &:active::-moz-range-thumb {
-                width: 16px;
-                height: 16px;
-            }
-
-            &::-moz-range-progress {
-                height: 10px;
-                border-radius: 10px;
-            }
-
-            &::-moz-focus-outer {
-                border: none;
-            }
-            //IE
-            &::-ms-track {
-                height: 15px;
-                border-color: transparent;
-                color: transparent;
-                border: none;
-                outline: none;
-                border-radius: 10px;
-                background: $light-sky;
-            }
-            &::-ms-thumb {
-                height: 15px;
-                width: 15px;
-                border-radius: 50%;
-                border: none;
-                outline: none;
-                background: $blue;
-            }
-            &::-ms-fill-lower {
-                background: transparent;
-            }
-        }
     }
     select {
         width: 100%;
@@ -273,7 +197,7 @@
     //按鈕
     button {
         padding: 5px $padding-XS;
-        background-color: $dark-blue;
+        background-color: $blue;
         border-radius: 8px;
         border: none;
         font-size: $size-h4;
@@ -296,9 +220,9 @@
     .button-outline {
         padding: 8px $padding-XS;
         background-color: transparent;
-        box-shadow: $dark-blue 0 0 0 1px;
+        box-shadow: $blue 0 0 0 1px;
         font-size: $size-h4;
-        color: $dark-blue;
+        color: $blue;
         font-weight: bold;
         @include mobile-L() {
             padding: 8px $padding-XS/2;
@@ -387,7 +311,6 @@
                     width: 100%;
                     margin: auto;
                     margin-bottom: $margin-XS;
-                    padding: 0;
                     padding: 0 $padding-S;
                     padding-top: $padding-XS;
                     @include mobile-L() {
@@ -506,7 +429,7 @@
                         background-color: transparent;
                         border: solid 1px $blue;
                         border-radius: 8px;
-                        color: $dark-blue;
+                        color: $blue;
                         font-size: $size-h4;
                         font-weight: bold;
                         padding: 5px $padding-XS;
@@ -553,7 +476,7 @@
                     margin: -2px;
                     font-size: $size-p;
                     line-height: $size-p * 3;
-                    color: $dark-blue;
+                    color: $blue;
                     @include mobile-S() {
                         width: 100%;
                         padding: 5px 15px;
@@ -565,6 +488,7 @@
                     &:hover {
                         background-color: $table-blue;
                         border: solid 1px $light-sky;
+                        color: $dark-blue !important;
                     }
                 }
                 .active {
@@ -1352,7 +1276,7 @@
             border-radius: 0;
         }
         .form-gp {
-            padding: 0 $padding-S;
+            padding: 0 $padding-XS;
             margin: 0;
             width: 100%;
             display: flex;
