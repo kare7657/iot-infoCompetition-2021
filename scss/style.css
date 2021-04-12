@@ -493,6 +493,13 @@
   text-align: center;
 }
 
+@media (max-width: 568px) {
+  * .modal-iot .modal-dialog .modal-content .btn-iot[type="submit"], * .modal-iot .modal-dialog .modal-content .btn-iot[type="reset"] {
+    padding: 5px 0;
+    margin-right: 15px;
+  }
+}
+
 * .modal-iot .modal-dialog .modal-content .btn-iot[type="submit"]:hover, * .modal-iot .modal-dialog .modal-content .btn-iot[type="reset"]:hover {
   background-color: #428cdc;
 }
@@ -508,6 +515,12 @@
   padding: 5px 30px;
   text-decoration: none;
   text-align: center;
+}
+
+@media (max-width: 568px) {
+  * .modal-iot .modal-dialog .modal-content .btn-iot[type="button"] {
+    padding: 5px 0;
+  }
 }
 
 * .modal-iot .modal-dialog .modal-content .btn-iot[type="button"]:hover {

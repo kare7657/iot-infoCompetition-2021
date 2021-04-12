@@ -420,6 +420,10 @@
                         padding: 5px $padding-XS;
                         text-decoration: none;
                         text-align: center;
+                        @include mobile-L() {
+                            padding: 5px 0;
+                            margin-right: $margin-XS * 1.5;
+                        }
                         &:hover {
                             background-color: $blue;
                         }
@@ -435,6 +439,9 @@
                         padding: 5px $padding-XS;
                         text-decoration: none;
                         text-align: center;
+                        @include mobile-L() {
+                            padding: 5px 0;
+                        }
                         &:hover {
                             background-color: $blue;
                             color: $title-W;
