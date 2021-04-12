@@ -97,6 +97,12 @@ body {
             .indent {
                 margin-left: 1rem;
             }
+            span{
+                font-size: $size-p;
+                font-weight: normal;
+                margin-left: $margin-XS;
+                letter-spacing: 1px;
+            }
         }
     }
     // 頁尾

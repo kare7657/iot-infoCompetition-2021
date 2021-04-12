@@ -47,7 +47,7 @@
         padding: 0;
         margin: 0;
         line-height: $size-h1 * 2;
-        margin-bottom: $margin-XS;
+        margin-bottom: $margin-S;
     }
     h2 {
         font-size: $size-h2;
@@ -963,10 +963,6 @@
 @mixin papers() {
     h1 {
         text-align: center;
-        @include mobile-L() {
-            margin: $margin-XS 0;
-            text-align: left;
-        }
     }
     h3 {
         margin-top: $margin-S;
@@ -978,12 +974,6 @@
         font-size: $size-p;
         line-height: $size-p * 2;
         color: $text;
-    }
-    .btn {
-        width: 100%;
-        padding: 0;
-        text-align: center;
-        margin: $margin-M 0;
     }
 }
 @mixin text-important() {
@@ -1540,23 +1530,70 @@
         border-collapse: collapse;
         width: 100%;
         table-layout: auto;
-        table,
+        s table,
         th,
         td {
             border: 1px solid $light-sky;
             padding: $padding-XXS/2 $padding-XXS;
-        }
-        th {
-            background-color: rgba($color: $light-sky, $alpha: 0.5);
             text-align: center;
+        }
+        thead {
             @include mobile-L {
-                &:nth-child(1) {
-                    width: 25%;
-                }
+                display: none;
             }
         }
-        tr:nth-child(even) {
-            background-color: rgba($color: $light-sky, $alpha: 0.1);
+        tr {
+            @include mobile-L {
+                display: block;
+                margin-bottom: $margin-S !important;
+            }
+            &:nth-child(even) {
+                background-color: rgba($color: $light-sky, $alpha: 0.1);
+                @include mobile-L {
+                    background-color: transparent;
+                }
+            }
+            th {
+                background-color: rgba($color: $light-sky, $alpha: 0.5);
+                text-align: center;
+                @include mobile-L {
+                    &:nth-child(1) {
+                        width: 25%;
+                    }
+                }
+            }
+            td {
+                color: $text;
+                @include mobile-L {
+                    display: block;
+                    flex-wrap: wrap;
+                    text-align: left;
+                    &::before {
+                        width: 100%;
+                        display: block;
+                        content: attr(data-title);
+                        font-weight: bold;
+                        font-size: $size-p;
+                        text-align: left;
+                        color: $title-BK;
+                    }
+                    &:nth-child(odd) {
+                        background-color: rgba($color: $light-sky, $alpha: 0.1);
+                    }
+                }
+            }
+            .btn {
+                margin: 0 $margin-XS/2;
+                @include pad {
+                    margin: $margin-XS/2 $margin-XS/1.5;
+                }
+                @include mobile-L {
+                    margin: $margin-XS/2 $margin-XS/1.5 $margin-XS/2 0 !important;
+                }
+            }
+            .btn-primary {
+                background-color: $blue;
+            }
         }
     }
 }

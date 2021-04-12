@@ -23,7 +23,7 @@
   padding: 0;
   margin: 0;
   line-height: 3.25rem;
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 * h2 {
@@ -1081,13 +1081,6 @@ body .content-information h1 {
   text-align: center;
 }
 
-@media (max-width: 568px) {
-  body .content-information h1 {
-    margin: 10px 0;
-    text-align: left;
-  }
-}
-
 body .content-information h3 {
   margin-top: 25px;
   margin-bottom: 10px;
@@ -1101,13 +1094,6 @@ body .content-information ul {
   color: #595757;
 }
 
-body .content-information .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 50px 0;
-}
-
 body .content-information span {
   color: #428cdc;
   font-weight: bold;
@@ -1119,26 +1105,91 @@ body .content-information table {
   table-layout: auto;
 }
 
-body .content-information table table,
+body .content-information table s table,
 body .content-information table th,
 body .content-information table td {
   border: 1px solid #a7e5ff;
   padding: 5px 10px;
-}
-
-body .content-information table th {
-  background-color: rgba(167, 229, 255, 0.5);
   text-align: center;
 }
 
 @media (max-width: 568px) {
-  body .content-information table th:nth-child(1) {
-    width: 25%;
+  body .content-information table thead {
+    display: none;
+  }
+}
+
+@media (max-width: 568px) {
+  body .content-information table tr {
+    display: block;
+    margin-bottom: 25px !important;
   }
 }
 
 body .content-information table tr:nth-child(even) {
   background-color: rgba(167, 229, 255, 0.1);
+}
+
+@media (max-width: 568px) {
+  body .content-information table tr:nth-child(even) {
+    background-color: transparent;
+  }
+}
+
+body .content-information table tr th {
+  background-color: rgba(167, 229, 255, 0.5);
+  text-align: center;
+}
+
+@media (max-width: 568px) {
+  body .content-information table tr th:nth-child(1) {
+    width: 25%;
+  }
+}
+
+body .content-information table tr td {
+  color: #595757;
+}
+
+@media (max-width: 568px) {
+  body .content-information table tr td {
+    display: block;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: left;
+  }
+  body .content-information table tr td::before {
+    width: 100%;
+    display: block;
+    content: attr(data-title);
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: left;
+    color: black;
+  }
+  body .content-information table tr td:nth-child(odd) {
+    background-color: rgba(167, 229, 255, 0.1);
+  }
+}
+
+body .content-information table tr .btn {
+  margin: 0 5px;
+}
+
+@media (max-width: 768px) {
+  body .content-information table tr .btn {
+    margin: 5px 6.66667px;
+  }
+}
+
+@media (max-width: 568px) {
+  body .content-information table tr .btn {
+    margin: 5px 6.66667px 5px 0 !important;
+  }
+}
+
+body .content-information table tr .btn-primary {
+  background-color: #428cdc;
 }
 
 body .content-information .container .list-gp {
@@ -1222,6 +1273,13 @@ body .content-information .container strong {
 
 body .content-information .container .indent {
   margin-left: 1rem;
+}
+
+body .content-information .container span {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 10px;
+  letter-spacing: 1px;
 }
 
 body footer {
@@ -1416,13 +1474,6 @@ body .content-news h1 {
   text-align: center;
 }
 
-@media (max-width: 568px) {
-  body .content-news h1 {
-    margin: 10px 0;
-    text-align: left;
-  }
-}
-
 body .content-news h3 {
   margin-top: 25px;
   margin-bottom: 10px;
@@ -1434,13 +1485,6 @@ body .content-news ul {
   font-size: 1rem;
   line-height: 2rem;
   color: #595757;
-}
-
-body .content-news .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 50px 0;
 }
 
 body .content-news .container .searchbar {
@@ -1569,13 +1613,6 @@ body .content-news-info h1 {
   text-align: center;
 }
 
-@media (max-width: 568px) {
-  body .content-news-info h1 {
-    margin: 10px 0;
-    text-align: left;
-  }
-}
-
 body .content-news-info h3 {
   margin-top: 25px;
   margin-bottom: 10px;
@@ -1587,13 +1624,6 @@ body .content-news-info ul {
   font-size: 1rem;
   line-height: 2rem;
   color: #595757;
-}
-
-body .content-news-info .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 50px 0;
 }
 
 body .content-news-info .container .info-top {
@@ -1686,13 +1716,6 @@ body .content-login h1 {
   text-align: center;
 }
 
-@media (max-width: 568px) {
-  body .content-login h1 {
-    margin: 10px 0;
-    text-align: left;
-  }
-}
-
 body .content-login h3 {
   margin-top: 25px;
   margin-bottom: 10px;
@@ -1704,13 +1727,6 @@ body .content-login ul {
   font-size: 1rem;
   line-height: 2rem;
   color: #595757;
-}
-
-body .content-login .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 50px 0;
 }
 
 body .content-login .container {
@@ -2034,13 +2050,6 @@ body .content-signup h1 {
   text-align: center;
 }
 
-@media (max-width: 568px) {
-  body .content-signup h1 {
-    margin: 10px 0;
-    text-align: left;
-  }
-}
-
 body .content-signup h3 {
   margin-top: 25px;
   margin-bottom: 10px;
@@ -2052,13 +2061,6 @@ body .content-signup ul {
   font-size: 1rem;
   line-height: 2rem;
   color: #595757;
-}
-
-body .content-signup .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 50px 0;
 }
 
 body .content-signup span {
@@ -2508,13 +2510,6 @@ body .content-signup h1 {
   text-align: center;
 }
 
-@media (max-width: 568px) {
-  body .content-signup h1 {
-    margin: 10px 0;
-    text-align: left;
-  }
-}
-
 body .content-signup h3 {
   margin-top: 25px;
   margin-bottom: 10px;
@@ -2526,13 +2521,6 @@ body .content-signup ul {
   font-size: 1rem;
   line-height: 2rem;
   color: #595757;
-}
-
-body .content-signup .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 50px 0;
 }
 
 body .content-signup span {
@@ -2995,13 +2983,6 @@ body .content-member-data h1 {
   text-align: center;
 }
 
-@media (max-width: 568px) {
-  body .content-member-data h1 {
-    margin: 10px 0;
-    text-align: left;
-  }
-}
-
 body .content-member-data h3 {
   margin-top: 25px;
   margin-bottom: 10px;
@@ -3013,13 +2994,6 @@ body .content-member-data ul {
   font-size: 1rem;
   line-height: 2rem;
   color: #595757;
-}
-
-body .content-member-data .btn {
-  width: 100%;
-  padding: 0;
-  text-align: center;
-  margin: 50px 0;
 }
 
 @media (max-width: 568px) {
