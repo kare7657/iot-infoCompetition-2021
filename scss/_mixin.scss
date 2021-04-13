@@ -37,6 +37,7 @@
         width: 1140px;
         margin: auto;
         padding: $padding-XS 0;
+        padding-bottom: $padding-M;
         @include pad() {
             width: 80%;
         }
@@ -796,15 +797,19 @@
 
 @mixin footer() {
     background-color: $light-gray;
-    @include mobile-L() {
-        background-color: $title-W;
-    }
+    width: 100%;
+    position: fixed;
+    bottom: 0;
     .container {
-        padding-top: 0;
+        padding-top: $padding-XS/2;
         padding-bottom: $padding-XS/2;
+        @include mobile-L() {
+            width: 100%;
+           display: flex;
+           justify-content: center;
+        }
         #AZ {
-            font-size: $size-h4;
-            color: $light-sky;
+            display: none;
         }
         .text-gp {
             margin: 0;
@@ -852,11 +857,9 @@
             justify-content: center;
             @include mobile-L() {
                 align-items: start;
+                flex-direction: column;
             }
             .text-gp {
-                @include mobile-L() {
-                    width: 50%;
-                }
                 &:not(:last-child) {
                     margin-right: $margin-S;
                 }
@@ -916,7 +919,7 @@
     text-align: center;
     @include web-S() {
         right: 25px;
-        bottom: 25px;
+        bottom: 45px;
     }
 }
 
@@ -1537,28 +1540,16 @@
         border-collapse: collapse;
         width: 100%;
         table-layout: auto;
-        s table,
+        table,
         th,
         td {
             border: 1px solid $light-sky;
             padding: $padding-XXS/2 $padding-XXS;
             text-align: center;
         }
-        thead {
-            @include mobile-L {
-                display: none;
-            }
-        }
         tr {
-            @include mobile-L {
-                display: block;
-                margin-bottom: $margin-S !important;
-            }
             &:nth-child(even) {
                 background-color: rgba($color: $light-sky, $alpha: 0.1);
-                @include mobile-L {
-                    background-color: transparent;
-                }
             }
             th {
                 background-color: rgba($color: $light-sky, $alpha: 0.5);
@@ -1571,6 +1562,46 @@
             }
             td {
                 color: $text;
+                @include mobile-L {
+                    flex-wrap: wrap;
+                    text-align: left;
+                }
+            }
+            .btn {
+                margin: 0 $margin-XS/2;
+                @include pad {
+                    margin: $margin-XS/2 $margin-XS/1.5;
+                }
+                @include mobile-L {
+                    margin: $margin-XS/2 $margin-XS/1.5 $margin-XS/2 0 !important;
+                }
+            }
+            .btn-primary {
+                background-color: $blue;
+            }
+        }
+    }
+    .mb-separate {
+        thead {
+            @include mobile-L {
+                display: none;
+            }
+        }
+        tr {
+            @include mobile-L {
+                display: block;
+                margin-bottom: $margin-S !important;
+            }
+            &:nth-child(even) {
+                @include mobile-L {
+                    background-color: transparent;
+                }
+            }
+            th {
+                background-color: rgba($color: $light-sky, $alpha: 0.5);
+                text-align: center;
+            }
+            td {
                 @include mobile-L {
                     display: block;
                     flex-wrap: wrap;
@@ -1588,18 +1619,6 @@
                         background-color: rgba($color: $light-sky, $alpha: 0.1);
                     }
                 }
-            }
-            .btn {
-                margin: 0 $margin-XS/2;
-                @include pad {
-                    margin: $margin-XS/2 $margin-XS/1.5;
-                }
-                @include mobile-L {
-                    margin: $margin-XS/2 $margin-XS/1.5 $margin-XS/2 0 !important;
-                }
-            }
-            .btn-primary {
-                background-color: $blue;
             }
         }
     }

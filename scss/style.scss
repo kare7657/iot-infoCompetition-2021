@@ -48,13 +48,6 @@ body {
     }
     //關於平台
     .content-about {
-        min-height: calc(100vh - 650px);
-        @include pad {
-            min-height: calc(100vh - 445px);
-        }
-        @include mobile-L {
-            min-height: auto;
-        }
         .container {
             display: flex;
             @include pad() {
@@ -76,17 +69,13 @@ body {
 
     //競賽辦法
     .content-information {
-        min-height: calc(100vh - 260px);
-        @include pad {
-            min-height: calc(100vh - 175px);
-        }
-        @include mobile-L {
-            min-height: auto;
-        }
         @include papers();
         @include text-important();
         @include table;
         .container {
+            @include mobile-L{
+                padding-bottom: $padding-L;
+            }
             .list-gp {
                 @include news-list(100%, 15%);
                 margin: $margin-S * 1.5 0;
@@ -188,13 +177,6 @@ body {
 
     //登入
     .content-login {
-        min-height: calc(100vh - 260px);
-        @include pad {
-            min-height: calc(100vh - 175px);
-        }
-        @include mobile-L {
-            min-height: auto;
-        }
         @include papers();
         .container {
             padding-top: 0;
@@ -232,22 +214,14 @@ body {
     }
     //註冊
     .content-signup {
-        min-height: calc(100vh - 260px);
-        @include pad {
-            min-height: calc(100vh - 175px);
-        }
-        @include mobile-L {
-            min-height: auto;
-        }
         @include papers();
         @include text-important();
         .container {
             padding-top: 0;
-            padding-bottom: $padding-S;
             @include mobile-L() {
                 width: 100%;
                 margin: 0;
-                padding-bottom: 0;
+                padding-bottom: $padding-S;
                 h1 {
                     text-align: center;
                 }
@@ -263,7 +237,6 @@ body {
                     margin: auto;
                     .form-submit {
                         width: 100%;
-                        // background-color: transparent;
                         text-align: center;
                         padding: 0 $padding-M;
                         @include web-S() {
@@ -372,43 +345,9 @@ body {
             }
         }
     }
-    //註冊-後台
-    .content-signup {
-        @include papers();
-        @include text-important();
-        .container {
-            .account-list-gp {
-                display: flex;
-                justify-content: space-between;
-                width: 100%;
-                @include pad() {
-                    flex-wrap: wrap;
-                }
-                #team {
-                    @include account-list($blue);
-                }
-                #egov {
-                    @include account-list($green);
-                }
-                #wrisp {
-                    @include account-list($blue);
-                }
-            }
-            .notice {
-                @include mobile-L() {
-                    h3 {
-                        margin-top: unset;
-                    }
-                }
-            }
-        }
-    }
+
     //註冊成功
     .content-sign-up-success {
-        min-height: calc(100vh - 80px);
-        @include mobile-L {
-            min-height: auto;
-        }
         .container {
             padding: $padding-M;
             padding-top: 250px;
