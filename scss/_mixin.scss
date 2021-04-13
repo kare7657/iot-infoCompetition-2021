@@ -103,7 +103,7 @@
     }
     //無障礙框線
     :focus {
-        outline: $blue dotted 3px !important;
+        outline: #22b573 dotted 3px !important;
     }
     .clearfix {
         clear: both;
@@ -519,7 +519,7 @@
     height: 40px;
     padding: 0;
     position: fixed;
-    z-index: 1000;
+    z-index: 999;
     background-color: #fff;
     @include pad() {
         display: none;
