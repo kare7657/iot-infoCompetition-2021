@@ -132,7 +132,7 @@
         appearance: none;
     }
     //表單
-    input {
+    input:not(.custom-control-input) {
         width: 100%;
         height: 40px;
         border-radius: 5px;
@@ -204,6 +204,7 @@
         font-size: $size-h4;
         color: $title-W;
         font-weight: bold;
+        cursor: pointer;
         &:hover {
             background-color: $blue;
             transition-duration: 0.5s;
@@ -219,15 +220,13 @@
         }
     }
     .button-outline {
-        padding: 8px $padding-XS;
-        background-color: transparent;
+        border-radius: 8px;
+        background-color: $title-W;
         box-shadow: $blue 0 0 0 1px;
         font-size: $size-h4;
         color: $blue;
         font-weight: bold;
-        @include mobile-L() {
-            padding: 8px $padding-XS/2;
-        }
+        cursor: pointer;
         &:hover {
             background-color: $blue;
             color: $title-W;

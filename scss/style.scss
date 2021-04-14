@@ -46,18 +46,21 @@ body {
             object-position: center center;
         }
     }
-    //關於平台
-    .content-about {
+    //最新消息&競賽主旨
+    .content-preview {
         .container {
             display: flex;
             @include pad() {
                 flex-wrap: wrap;
             }
+            .new {
+                @include news-list(50%, 25%);
+            }
             .about {
-                width: 100%;
-
-                h1 {
-                    color: $title-D;
+                width: 50%;
+                @include pad() {
+                    width: 100%;
+                    margin-bottom: $margin-S;
                 }
             }
         }
@@ -73,7 +76,7 @@ body {
         @include text-important();
         @include table;
         .container {
-            @include mobile-L{
+            @include mobile-L {
                 padding-bottom: $padding-L;
             }
             .list-gp {
@@ -86,11 +89,26 @@ body {
             .indent {
                 margin-left: 1rem;
             }
-            span{
+            span {
                 font-size: $size-p;
                 font-weight: normal;
                 margin-left: $margin-XS;
                 letter-spacing: 1px;
+            }
+            .btn-gp {
+                margin-top: $margin-S;
+                @include mobile-L {
+                    margin-top: $margin-XS;
+                }
+                button {
+                    @include mobile-L {
+                        width: 100%;
+                        margin-bottom: $margin-XS*1.5;
+                    }
+                    &:not(:last-child) {
+                        margin-right: $margin-XS;
+                    }
+                }
             }
         }
     }

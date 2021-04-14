@@ -50,7 +50,8 @@
                         <td data-title="上傳檔案"><a href="">檔案.pdf</a></td>
                         <td data-title="上傳時間">2020/3/31 14:30</td>
                         <td data-title="功能">
-                            <button type="button" class="btn btn-sm btn-primary">上傳</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#modalChangPWD">上傳</button>
                             <button type="button" class="btn btn-sm btn-secondary">刪除</button>
                         </td>
                     </tr>
@@ -60,7 +61,8 @@
                         <td data-title="上傳檔案"><a href="">檔案.pdf</a></td>
                         <td data-title="上傳時間">2020/3/31 14:30</td>
                         <td data-title="功能">
-                            <button type="button" class="btn btn-sm btn-primary">上傳</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#modalChangPWD">上傳</button>
                             <button type="button" class="btn btn-sm btn-secondary">刪除</button>
                         </td>
                     </tr>
@@ -70,7 +72,8 @@
                         <td data-title="上傳檔案"><a href="">檔案.pdf</a></td>
                         <td data-title="上傳時間">2020/3/31 14:30</td>
                         <td data-title="功能">
-                            <button type="button" class="btn btn-sm btn-primary">上傳</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#modalChangPWD">上傳</button>
                             <button type="button" class="btn btn-sm btn-secondary">刪除</button>
                         </td>
                     </tr>
@@ -80,14 +83,15 @@
                         <td data-title="上傳檔案"><a href="">檔案.pdf</a></td>
                         <td data-title="上傳時間">2020/3/31 14:30</td>
                         <td data-title="功能">
-                            <button type="button" class="btn btn-sm btn-primary">上傳</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#modalChangPWD">上傳</button>
                             <button type="button" class="btn btn-sm btn-secondary">刪除</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
             <h4 class="mt-4">二、決選<span>(2021/8/10~9/30)</span></h4>
-            <table  class="mb-separate">
+            <table class="mb-separate">
                 <thead>
                     <tr>
                         <th>項目</th>
@@ -104,7 +108,8 @@
                         <td data-title="上傳檔案"><a href="">檔案.pdf</a></td>
                         <td data-title="上傳時間">2020/3/31 14:30</td>
                         <td data-title="功能">
-                            <button type="button" class="btn btn-sm btn-primary">上傳</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#modalChangPWD">上傳</button>
                             <button type="button" class="btn btn-sm btn-secondary">刪除</button>
                         </td>
                     </tr>
@@ -114,7 +119,8 @@
                         <td data-title="上傳檔案"><a href="">檔案.pdf</a></td>
                         <td data-title="上傳時間">2020/3/31 14:30</td>
                         <td data-title="功能">
-                            <button type="button" class="btn btn-sm btn-primary">上傳</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#modalChangPWD">上傳</button>
                             <button type="button" class="btn btn-sm btn-secondary">刪除</button>
                         </td>
                     </tr>
@@ -124,7 +130,8 @@
                         <td data-title="上傳檔案"><a href="">檔案.pdf</a></td>
                         <td data-title="上傳時間">2020/3/31 14:30</td>
                         <td data-title="功能">
-                            <button type="button" class="btn btn-sm btn-primary">上傳</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#modalChangPWD">上傳</button>
                             <button type="button" class="btn btn-sm btn-secondary">刪除</button>
                         </td>
                     </tr>
@@ -134,15 +141,54 @@
                         <td data-title="上傳檔案"><a href="">檔案.pdf</a></td>
                         <td data-title="上傳時間">2020/3/31 14:30</td>
                         <td data-title="功能">
-                            <button type="button" class="btn btn-sm btn-primary">上傳</button>
+                            <button type="button" class="btn btn-sm btn-primary" data-toggle="modal"
+                                data-target="#modalChangPWD">上傳</button>
                             <button type="button" class="btn btn-sm btn-secondary">刪除</button>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
+
+            <div class="btn-gp text-center">
+                <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">我已確認上列資料正確無誤</label>
+                </div>
+                <button type="submit">確認送出</button>
+                <button type="button">按鈕</button>
+                <button type="reset" class="button-outline">取消申請</button>
+            </div>
+
         </div>
     </section>
+
+    <!-- modal-iot -->
+    <div class="modal fade modal-iot" id="modalChangPWD" tabindex="-1" role="dialog" aria-labelledby="modalPrivateLabel"
+        data-backdrop="static" style=" padding-top: 0;">
+        <form name="fm_ChangPWD" id="fm_ChangPWD" method="post" action="ChangPWD.jsp" target="frm_ChangPWD">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+                        <h2 class="modal-title" id="modalPrivateLabel">上傳檔案</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="custom-file mt-2 mb-4">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">選擇檔案</label>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" name="go" id="go" class="btn-iot">確認</button>
+                        <button type="button" name="cancel" id="cancel" class="btn-iot" data-dismiss="modal">關閉</button>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
 
 
     <!-- footer -->
@@ -165,6 +211,14 @@
         });
     </script>
 
+    <!-- input file獲取檔名 -->
+    <script>
+        $(document).ready(function () {
+            $(".custom-file-input").change(function () {
+                $(this).next(".custom-file-label").html($(this).val().split("\\").pop());
+            });
+        });
+    </script>
 
 </body>
 
