@@ -941,8 +941,7 @@
     }
 }
 
-@mixin news-list($list-width, $span-width) {
-    width: $list-width;
+@mixin news-list($span-width, $a-width) {
     margin-right: $margin-M;
     @include pad() {
         width: 100%;
@@ -970,11 +969,26 @@
                 margin-right: $margin-S;
             }
             @include mobile-L() {
+                width: 100%;
                 margin-right: unset;
+                text-align: left;
             }
         }
-        a:hover p {
-            color: $blue;
+        a {
+            width: $a-width;
+            padding-right: $padding-XS;
+            @include mobile-L() {
+                width: 100%;
+                padding-right: 0;
+            }
+            &:hover p {
+                color: $blue;
+            }
+            i {
+                font-size: $size-p;
+                color: $blue;
+                margin-right: $margin-XS/1.5;
+            }
         }
     }
     .blue {

@@ -103,7 +103,7 @@ body {
                 button {
                     @include mobile-L {
                         width: 100%;
-                        margin-bottom: $margin-XS*1.5;
+                        margin-bottom: $margin-XS * 1.5;
                     }
                     &:not(:last-child) {
                         margin-right: $margin-XS;
@@ -134,7 +134,8 @@ body {
                 @include searchbar();
             }
             .list-gp {
-                @include news-list(100%, 15%);
+                width: 100%;
+                @include news-list(15%, 85%);
             }
         }
     }
