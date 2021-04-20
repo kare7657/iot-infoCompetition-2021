@@ -54,7 +54,8 @@ body {
                 flex-wrap: wrap;
             }
             .new {
-                @include news-list(50%, 25%);
+                width: 50%;
+                @include news-list(25%, 75%);
             }
             .about {
                 width: 50%;

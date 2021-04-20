@@ -1613,6 +1613,17 @@
             }
         }
     }
+    .rowspan {
+
+        .color {
+             background-color: rgba(167, 229, 255, 0.1) !important;
+        }
+        tr {
+            &:nth-child(even) {
+                background-color: $title-W;
+            }
+        }
+    }
     .mb-separate {
         thead {
             @include mobile-L {
