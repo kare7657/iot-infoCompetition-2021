@@ -37,7 +37,7 @@
         width: 1140px;
         margin: auto;
         padding: $padding-XS 0;
-        padding-bottom: $padding-M;
+        // padding-bottom: $padding-S;
         @include pad() {
             width: 80%;
         }
@@ -579,13 +579,14 @@
             display: none;
         }
         .navbar-L {
-            width: 35%;
+            width: 30%;
             height: 100%;
             @include web-S() {
                 margin-left: $margin-S;
             }
             img {
-                width: 300px;
+                max-width: 300px;
+                width: 100%;
             }
             h4 {
                 font-size: $size-h4;
@@ -596,12 +597,13 @@
             }
         }
         .navbar-R {
-            width: 65%;
+            width: 70%;
             height: 100%;
             color: $title-W;
             display: flex;
             justify-content: flex-end;
             position: relative;
+            align-items: center;
             @include web-S() {
                 margin-right: $margin-S;
             }
@@ -610,13 +612,16 @@
                 color: $blue;
                 margin: 0;
                 padding: 0;
-                line-height: 80px;
+                // line-height: 80px;
                 display: inline;
             }
             .nav-function {
                 position: relative;
                 &:not(:last-child) {
                     margin-right: 20px;
+                    @include web-S {
+                        margin-right: 10px;
+                    }
                 }
                 &:hover {
                     .nav-list {
@@ -797,117 +802,84 @@
 @mixin footer() {
     background-color: $light-gray;
     width: 100%;
-    position: fixed;
     bottom: 0;
     .container {
         padding-top: $padding-XS/2;
-        padding-bottom: $padding-XS/2;
+        padding-bottom: $padding-XXS/2;
         @include mobile-L() {
             width: 100%;
             display: flex;
             justify-content: center;
+            padding:  $padding-XS/1.5 $padding-XS;
         }
         @include mobile-XS() {
-            padding: $padding-XXS;
+            padding:  $padding-XS/1.5;
         }
         #AZ {
             display: none;
-        }
-        .text-gp {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            ul,
-            li {
-                display: inline;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                @include mobile-L() {
-                    display: block;
-                }
-            }
-            li {
-                margin-right: $margin-S;
-            }
-            span {
-                font-size: $size-p;
-                color: $green;
-                line-height: $size-p;
-                margin: 0;
-                padding: 0 $padding-XXS;
-                @include mobile-L() {
-                    line-height: $size-h4 * 1.5;
-                }
-                @include mobile-XS() {
-                    font-size: 0.875rem;
-                }
-            }
-            a {
-                font-size: $size-h4;
-                color: $blue;
-                font-weight: bold;
-                line-height: $size-h4 * 2;
-                &:hover {
-                    color: $dark-blue;
-                }
-            }
-            .fas {
-                width: 10px;
-                margin-right: 12px;
-            }
         }
         .contact {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
             @include mobile-L() {
                 align-items: start;
                 flex-direction: column;
             }
             .text-gp {
+                display: flex;
+                align-items: center;
+                margin-bottom: $margin-XS/2;
+                @include mobile-L() {
+                    flex-wrap: wrap;
+                    margin-bottom: 0;
+                }
+
                 &:not(:last-child) {
                     margin-right: $margin-S;
+                    @include mobile-L() {
+                        margin-right: 0;
+                    }
                 }
                 p {
-                    color: $title-W;
-                    margin-top: 3px;
-                    margin-bottom: 10px;
+                    color: $text;
+                    margin-right: $margin-S;
+                    line-height: 1.5;
                     @include mobile-L() {
-                        margin-bottom: 20px;
+                        margin-right: 0;
+                        line-height: 2.2;
+                        width: 100%;
                     }
                 }
                 a {
-                    color: $green;
-                    font-size: $size-h4;
-                    font-weight: bold;
+                    color: $blue;
                     &:hover {
-                        .fas {
-                            color: $green;
-                        }
+                        color: $dark-blue !important;
                     }
                 }
                 .fas {
-                    color: $green;
-                    width: 10px;
-                    margin-right: 12px;
+                    color: $blue;
+                    width: 20px;
+                    margin-right: $margin-XS;
+                    text-align: center;
                 }
                 span {
                     color: $text;
                     padding: 0;
+                    line-height: 1.5;
+                    @include mobile-L() {
+                        line-height: 2.5;
+                        width: 100%;
+                    }
                 }
                 img {
-                    width: 30px;
-                    height: 30px;
-                    margin-left: $margin-XS;
+                    width: 20px;
+                    height: 20px;
+                    margin-right: $margin-XS;
                     @include mobile-L() {
                         width: 20px;
                         height: 20px;
-                    }
-                    @include mobile-XS() {
-                        width: 15px;
-                        height: 15px;
                     }
                 }
             }
@@ -933,7 +905,7 @@
         bottom: 45px;
     }
     @include mobile-L() {
-        bottom: 50px;
+        bottom: 30px;
         width: 40px;
         height: 40px;
         line-height: 37px;
@@ -1614,9 +1586,8 @@
         }
     }
     .rowspan {
-
         .color {
-             background-color: rgba(167, 229, 255, 0.1) !important;
+            background-color: rgba(167, 229, 255, 0.1) !important;
         }
         tr {
             &:nth-child(even) {
