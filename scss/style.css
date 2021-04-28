@@ -1523,14 +1523,19 @@ body footer .container .contact .text-gp:not(:last-child) {
 body footer .container .contact .text-gp p {
   color: #595757;
   margin-right: 25px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 @media (max-width: 568px) {
   body footer .container .contact .text-gp p {
     margin-right: 0;
-    line-height: 2.2;
     width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  body footer .container .contact .text-gp p {
+    font-size: 0.875rem;
   }
 }
 
@@ -1552,12 +1557,11 @@ body footer .container .contact .text-gp .fas {
 body footer .container .contact .text-gp span {
   color: #595757;
   padding: 0;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 @media (max-width: 568px) {
   body footer .container .contact .text-gp span {
-    line-height: 2.5;
     width: 100%;
   }
 }

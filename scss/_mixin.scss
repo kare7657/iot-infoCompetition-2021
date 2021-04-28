@@ -810,10 +810,10 @@
             width: 100%;
             display: flex;
             justify-content: center;
-            padding:  $padding-XS/1.5 $padding-XS;
+            padding: $padding-XS/1.5 $padding-XS;
         }
         @include mobile-XS() {
-            padding:  $padding-XS/1.5;
+            padding: $padding-XS/1.5;
         }
         #AZ {
             display: none;
@@ -845,11 +845,13 @@
                 p {
                     color: $text;
                     margin-right: $margin-S;
-                    line-height: 1.5;
+                    line-height: 2;
                     @include mobile-L() {
                         margin-right: 0;
-                        line-height: 2.2;
                         width: 100%;
+                    }
+                    @include mobile-XS {
+                        font-size: 0.875rem;
                     }
                 }
                 a {
@@ -867,9 +869,8 @@
                 span {
                     color: $text;
                     padding: 0;
-                    line-height: 1.5;
+                    line-height: 2;
                     @include mobile-L() {
-                        line-height: 2.5;
                         width: 100%;
                     }
                 }
