@@ -1432,6 +1432,14 @@ body .content-information .container .btn-gp button:not(:last-child) {
   margin-right: 10px;
 }
 
+body .content-information .container img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: top;
+     object-position: top;
+  width: 100%;
+}
+
 body footer {
   background-color: #f2f2f3;
   width: 100%;
