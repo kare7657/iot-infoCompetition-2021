@@ -204,7 +204,7 @@
         color: $title-W;
         font-weight: bold;
         cursor: pointer;
-        &:hover {
+        &:hover:not(.close) {
             background-color: $blue;
             transition-duration: 0.5s;
         }
