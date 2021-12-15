@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2021水資料應用競賽</title>
-	<!-- Font Awesome Icons -->
-	<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="scss/style.css">
 
 </head>
@@ -50,9 +50,17 @@
                     </a>
                 </div>
                 <div class="nav-function">
-                    <a href="competition-document.html">
+                    <a href="">
                         <h4>相關文件</h4>
                     </a>
+                    <div class="nav-list">
+                        <a href="competition-document.html">
+                            <h4>文件下載</h4>
+                        </a>
+                        <a href="competition-document-collection.html">
+                            <h4>資料集</h4>
+                        </a>
+                    </div>
                 </div>
                 <div class="nav-function">
                     <a href="competition-notice.html">
@@ -61,7 +69,7 @@
                 </div>
                 <div class="nav-function">
                     <a href="competition-upload.html">
-                        <h4>資料上傳</h4>
+                        <h4>報名專區</h4>
                     </a>
                 </div>
             </div>
@@ -74,9 +82,23 @@
                     <li><a href="competition-news.html">最新消息</a></li>
                     <li><a href="competition-rules.html">競賽辦法</a></li>
                     <li><a href="competition-judges.html">評審委員</a></li>
-                    <li><a href="competition-document.html">相關文件</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="competition-document.html" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            相關文件
+                        </a>
+                        <div class="dropdown-menu shadow-lg">
+                            <a class="dropdown-item" href="competition-document.html">
+                                <h4>文件下載</h4>
+                            </a>
+                            <a class="dropdown-item" href="competition-document-collection.html">
+                                <h4>資料集</h4>
+                            </a>
+                        </div>
+                    </li>
                     <li><a href="competition-notice.html">注意事項</a></li>
                     <li><a href="competition-upload.html">資料上傳</a></li>
+
                     <li><a href="login.html">登入</a></li>
                     <li><a href="sign-up.html">註冊</a></li>
                 </ul>

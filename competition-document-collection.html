@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相關文件</title>
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="scss/bootstrap.4.2.css">
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <header id="header"></header>
+
+    <!-- breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+                <li>></li>
+                <li><span>相關文件</span></li>
+                <li>></li>
+                <li><span>資料集</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 資料集 -->
+    <section class="content-information">
+        <div class="container">
+            <a href="#C" title="中央內容區塊" id="AC" accesskey="C"></a>
+            <h1>資料集</h1>
+            <p><span class="notice">作品必須與競賽主題相關，使用主辦單位提供之公開水利資料至少一筆進行創作</span> ，水利資料開放資料集主要來源如下：</p>
+            <h4>一、水利署水利資料整合雲</h4>
+            <p>目前分為水資源資料(98個)、防災應用(32個)、水利行政(69個)、生態資料(9個)等4大類208個資料集。</p>
+            <p>網站連結：<a href="https://data.wra.gov.tw/" title="水利資料整合雲" target="_blank">水利資料整合雲</a></p>
+            <h4>二、水利署水利地理資訊服務平臺</h4>
+            <p>目前分為河川水文(16個)、地下水文(46個)、水庫保育(12個)及防洪排水(22個)等4大類共計96個資料集。</p>
+            <p>網站連結：<a href="https://gic.wra.gov.tw/gis/" title="水利地理資訊服務平臺" target="_blank">水利地理資訊服務平臺</a></p>
+            <br>
+            <p>亦可搭配其他政府機關、民間開放資料進行開發，如中央氣象局氣象資料開放平臺、交通部政府開放資料平台、民生公共物聯網資料服務平台、國家發展委員會政府資料開放平臺、水土保持局資料平臺…等</p>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer"></footer>
+
+    <!-- jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- bootstrap -->
+    <!-- <script src="js/jquery-3.3.1.slim.min.js" ></script> -->
+    <script src="js/bootstrap.min.4.2.js"></script>
+    <script src="js/popper.min.js"></script>
+
+    <!-- 引入html header&footer -->
+    <script>
+        $(function () {
+            $("#header").load('navbar.html');
+            $("#footer").load("footer.html");
+        });
+    </script>
+
+</body>
+
+</html>

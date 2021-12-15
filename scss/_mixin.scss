@@ -84,11 +84,11 @@
         word-wrap: break-word;
         word-break: break-all;
     }
-    a {
+    a{
         text-decoration: none !important;
         list-style: none !important;
         &:hover {
-            color: $green !important;
+            color: $dark-blue !important;
         }
     }
     //font-awesome
@@ -115,8 +115,9 @@
     h6 {
         font-weight: bold;
     }
-    section {
-        width: 100%;
+    .notice {
+        color: $red !important;
+        margin: 0 !important;
     }
     hr {
         border-top: 1px solid $light-sky;
@@ -551,6 +552,9 @@
                 display: inline;
                 color: $title-W;
                 font-weight: bold;
+                &:hover{
+                    color: $title-W !important;
+                }
             }
         }
     }
@@ -559,7 +563,7 @@
     width: 100%;
     padding: 0;
     position: fixed;
-    z-index: 999;
+    z-index: 1000;
     background-color: white;
     box-shadow: 5px 5px 10px rgba($color: $blue, $alpha: 0.1);
     display: flex;
@@ -601,8 +605,6 @@
             color: $title-W;
             display: flex;
             justify-content: flex-end;
-            position: relative;
-            align-items: center;
             @include web-S() {
                 margin-right: $margin-S;
             }
@@ -611,11 +613,13 @@
                 color: $blue;
                 margin: 0;
                 padding: 0;
-                // line-height: 80px;
                 display: inline;
+                height: 100%;
             }
             .nav-function {
                 position: relative;
+                display: flex;
+                align-items: center;
                 &:not(:last-child) {
                     margin-right: 20px;
                     @include web-S {
@@ -624,7 +628,8 @@
                 }
                 &:hover {
                     .nav-list {
-                        display: block;
+                        display: flex;
+                        flex-direction: column;
                         transition-duration: 0.5s;
                     }
                 }
@@ -642,15 +647,15 @@
                 width: 180px;
                 border-radius: 0 0 8px 8px;
                 padding: 0 20px 10px 20px;
-                background-color: rgba($color: #1480be, $alpha: 1);
-
+                background-color: rgba($color: #428cdc, $alpha: 1);
+                box-shadow: 5px 5px 10px rgba($color: $blue, $alpha: 0.1);
                 h4 {
                     margin: 0;
                     padding: 0;
                     line-height: $size-h4 * 2.5;
                     color: $title-W;
-                    &:hover {
-                        color: $light-sky;
+                    &:hover,&:active {
+                        color: $title-W !important;
                     }
                 }
             }
@@ -693,17 +698,20 @@
                         background-color: $blue;
                         color: $title-W;
                         text-align: center;
+                        box-shadow: none !important;
+                        background-color: rgba($color: #1e66b4, $alpha: 0.4);
                         .dropdown-item {
                             padding: 15px 0;
                         }
                     }
                     .nav-link.dropdown-toggle {
                         padding: 5px 0;
+                        color: $title-W !important;
                     }
                 }
             }
             h4 {
-                color: $light-sky;
+                color: $title-W;
             }
             a {
                 color: $title-W;
@@ -910,6 +918,39 @@
         height: 40px;
         line-height: 37px;
         font-size: $size-p;
+    }
+}
+
+@mixin fast-link() {
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+    position: fixed;
+    right: 40px;
+    bottom: 100px;
+    background-color: rgba($color: $blue, $alpha: 0.8);
+    border-radius: 50%;
+    line-height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+    p {
+        position: absolute;
+        top: -28px;
+        font-size: 0.875rem;
+        color: $blue;
+        font-weight: bold;
+    }
+    @include web-S() {
+        right: 25px;
+        bottom: 110px;
+    }
+    @include mobile-L() {
+        display: none;
     }
 }
 
