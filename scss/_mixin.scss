@@ -812,7 +812,7 @@
     bottom: 0;
     .container {
         padding-top: $padding-XS/2;
-        padding-bottom: $padding-XXS/2;
+        padding-bottom: $padding-XXS;
         @include mobile-L() {
             width: 100%;
             display: flex;
@@ -828,17 +828,26 @@
         .contact {
             display: flex;
             align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            @include pad{
+                // flex-wrap: wrap;
+            }
             @include mobile-L() {
+                flex-wrap: wrap;
                 align-items: start;
                 flex-direction: column;
             }
             .text-gp {
+                width: 85%;
                 display: flex;
-                align-items: center;
+                flex-direction: column;
+                align-items: flex-start;
                 margin-bottom: $margin-XS/2;
+                @include pad{
+                    width: 80%;
+                }
                 @include mobile-L() {
+                    width: 100%;
                     flex-wrap: wrap;
                     margin-bottom: 0;
                 }
@@ -853,9 +862,14 @@
                     color: $text;
                     margin-right: $margin-S;
                     line-height: 2;
+                    @include web-S{
+                        // width: 100%;
+                        text-align: center;
+                    }
                     @include mobile-L() {
                         margin-right: 0;
                         width: 100%;
+                        text-align: left;
                     }
                     @include mobile-XS {
                         font-size: 0.875rem;
@@ -870,7 +884,7 @@
                 .fas {
                     color: $blue;
                     width: 20px;
-                    margin-right: $margin-XS;
+                    margin-right: $margin-XS/2;
                     text-align: center;
                 }
                 span {
@@ -884,10 +898,31 @@
                 img {
                     width: 20px;
                     height: 20px;
-                    margin-right: $margin-XS;
+                    margin: 0 $margin-XS/2;
+                    margin-left: $margin-XS;
                     @include mobile-L() {
                         width: 20px;
                         height: 20px;
+                    }
+                }
+            }
+            .qr{
+                width: 15%;
+                text-align: right;
+                @include pad{
+                    width: 20%;
+                }
+                @include mobile-L(){
+                    width: 100%;
+                    text-align: center;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 90px;
+                    @include mobile-L(){
+                        max-width: 150px;
+                        margin-top: $margin-XS;
                     }
                 }
             }

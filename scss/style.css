@@ -1469,7 +1469,7 @@ body footer {
 
 body footer .container {
   padding-top: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 568px) {
@@ -1502,15 +1502,15 @@ body footer .container .contact {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media (max-width: 568px) {
   body footer .container .contact {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: start;
@@ -1522,17 +1522,29 @@ body footer .container .contact {
 }
 
 body footer .container .contact .text-gp {
+  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  body footer .container .contact .text-gp {
+    width: 80%;
+  }
 }
 
 @media (max-width: 568px) {
   body footer .container .contact .text-gp {
+    width: 100%;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-bottom: 0;
@@ -1555,10 +1567,17 @@ body footer .container .contact .text-gp p {
   line-height: 2;
 }
 
+@media (max-width: 1024px) {
+  body footer .container .contact .text-gp p {
+    text-align: center;
+  }
+}
+
 @media (max-width: 568px) {
   body footer .container .contact .text-gp p {
     margin-right: 0;
     width: 100%;
+    text-align: left;
   }
 }
 
@@ -1579,7 +1598,7 @@ body footer .container .contact .text-gp a:hover {
 body footer .container .contact .text-gp .fas {
   color: #428cdc;
   width: 20px;
-  margin-right: 10px;
+  margin-right: 5px;
   text-align: center;
 }
 
@@ -1598,13 +1617,45 @@ body footer .container .contact .text-gp span {
 body footer .container .contact .text-gp img {
   width: 20px;
   height: 20px;
-  margin-right: 10px;
+  margin: 0 5px;
+  margin-left: 10px;
 }
 
 @media (max-width: 568px) {
   body footer .container .contact .text-gp img {
     width: 20px;
     height: 20px;
+  }
+}
+
+body footer .container .contact .qr {
+  width: 15%;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  body footer .container .contact .qr {
+    width: 20%;
+  }
+}
+
+@media (max-width: 568px) {
+  body footer .container .contact .qr {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+body footer .container .contact .qr img {
+  width: 100%;
+  height: 100%;
+  max-width: 90px;
+}
+
+@media (max-width: 568px) {
+  body footer .container .contact .qr img {
+    max-width: 150px;
+    margin-top: 10px;
   }
 }
 

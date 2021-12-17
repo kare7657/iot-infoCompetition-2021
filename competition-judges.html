@@ -120,12 +120,13 @@
             </table>
 
             <h3>評分標準</h3>
-            <div class="row mt-3 mb-4 ">
-                <img class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" src="img/score1.png" alt="評分標準1">
-                <img class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" src="img/score2.png" alt="評分標準2">
-                <img class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" src="img/score3.png" alt="評分標準3">
-                <img class="col-12 col-sm-6 col-lg-3 mb-4 mb-lg-0" src="img/score4.png" alt="評分標準4">
-            </div>
+            <picture class="mt-2 mb-2">
+                <source media="(min-width:1024px)" srcset="img/Web_judge-B.jpg">
+                <source media="(min-width:768px)" srcset="img/Web_judge-S.jpg">
+                <source media="(max-width:568px)" srcset="img/Web_judge-XS.jpg">
+                <img src="img/Web_judge-B.jpg" alt="評分標準">
+            </picture>
+            <p class="notice pb-2"><i class="fas fa-exclamation-circle mr-1"></i>提案具有產品功能完成度、功能完整性、產品生命持續性及未來擴充性，評審將酌予最高加5分</p>
 
             <table class="rowspan">
                 <thead>
