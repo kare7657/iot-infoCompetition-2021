@@ -989,7 +989,7 @@ body .content-banner {
 
 body .content-banner img {
   width: 100%;
-  max-height: 450px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
@@ -1270,6 +1270,21 @@ body .content-information .rowspan .color {
 
 body .content-information .rowspan tr:nth-child(even) {
   background-color: white;
+}
+
+@media (max-width: 768px) {
+  body .content-information .rowspan th:nth-child(1) {
+    width: 23% !important;
+  }
+  body .content-information .rowspan th:nth-child(3) {
+    width: 15% !important;
+  }
+}
+
+@media (max-width: 568px) {
+  body .content-information .rowspan th {
+    width: initial;
+  }
 }
 
 @media (max-width: 568px) {

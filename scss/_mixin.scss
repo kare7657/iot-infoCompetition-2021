@@ -1670,6 +1670,19 @@
                 background-color: $title-W;
             }
         }
+        th{
+            @include pad{
+                &:nth-child(1){
+                    width: 23% !important;
+                }
+                &:nth-child(3){
+                    width: 15% !important;
+                }
+            }
+            @include mobile-L(){
+                width: initial;
+            }
+        }
     }
     .mb-separate {
         thead {
